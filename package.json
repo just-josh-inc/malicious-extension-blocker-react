@@ -1,0 +1,28 @@
+{
+  "name": "malicious-extension-blocker-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [],
+  "author": "Just Josh Tech | Trehan Sangpriya",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^17 || ^18",
+    "react-dom": "^17 || ^18"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "typescript": "^5.7.3"
+  }
+}

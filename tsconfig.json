@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // or "ES2020", depending on your requirements
+    "module": "ESNext", // or "CommonJS", if you prefer
+    "jsx": "react", // Support JSX
+    "declaration": true, // Generate .d.ts files
+    "outDir": "dist", // Output folder
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Allow default imports from CJS modules
+    "skipLibCheck": true // Skips checking .d.ts files
+  },
+  "include": ["src"]
+}
