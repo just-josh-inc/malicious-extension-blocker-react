@@ -10,7 +10,7 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [],
-  "author": "Just Josh Tech | Trehan Sangpriya",
+  "author": "Just Josh | Trehan Sangpriya",
   "license": "MIT",
   "peerDependencies": {
     "react": "^17 || ^18",
