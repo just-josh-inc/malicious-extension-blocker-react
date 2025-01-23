@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES6", // or "ES2020", depending on your requirements
+    "target": "ES2016", // or "ES2020", depending on your requirements
     "module": "ESNext", // or "CommonJS", if you prefer
     "jsx": "react", // Support JSX
     "declaration": true, // Generate .d.ts files
