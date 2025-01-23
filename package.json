@@ -1,7 +1,7 @@
 {
   "name": "malicious-extension-blocker-react",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A React component that detects unwanted Chrome extensions and displays warnings in various UI formats. It helps ensure specific browser extensions do not interfere with your application.",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
