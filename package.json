@@ -9,7 +9,15 @@
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [],
+  "keywords": [
+    "chrome-extension-detection",
+    "browser-extension-detection",
+    "malicious-extension-blocker-react",
+    "malicious-extension-blocker",
+    "extension-blocker",
+    "extension-detection",
+    "extension-warning"
+  ],
   "author": "Just Josh | Trehan Sangpriya",
   "license": "MIT",
   "peerDependencies": {
