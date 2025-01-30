@@ -162,8 +162,8 @@ const targetExtensions: Extension[] = [
 
 export function ExtensionChecker({
   unwantedExtensions,
-  title = "Unwanted Extensions Detected",
-  description = "The following browser extensions may interfere with this application:",
+  title = "PayPal Honey - Browser Plugin Detected",
+  description = "We've detected the use of PayPal Honey - Browser Plugin. Using such a plugin denies us the ability to earn revenue for the advice we give. We would appreciate it if you would disable it and not use it at any eCommerce site that we have links to.",
   onDetect,
   displayMode = "alert", // Default display mode
   autoHideDuration,
@@ -242,16 +242,26 @@ export function ExtensionChecker({
       <h2 style={{ fontSize: "1.125rem", fontWeight: 600, margin: 0 }}>
         {title}
       </h2>
-      <p style={{ marginTop: "0.5rem", marginBottom: 0 }}>{description}</p>
+      <p style={{ marginTop: "0.5rem", marginBottom: 0, color: "#000" }}>
+        {description}
+      </p>
       <ul
         style={{
           marginTop: "0.5rem",
           listStyleType: "disc",
           paddingLeft: "1.5rem",
+          color: "#000",
         }}
       >
         {detectedUnwantedExtensions.map((ext) => (
-          <li key={ext}>{ext}</li>
+          <li
+            style={{
+              fontWeight: 600,
+            }}
+            key={ext}
+          >
+            {ext}
+          </li>
         ))}
       </ul>
       {/* Close button for non-block modes */}
@@ -261,11 +271,12 @@ export function ExtensionChecker({
           aria-label="Close"
           style={{
             position: "absolute",
-            top: "0.3rem",
-            right: "0.3rem",
+            top: "0rem",
+            right: "0rem",
             background: "transparent",
             border: "none",
             cursor: "pointer",
+            color: "#000",
           }}
         >
           X
@@ -278,9 +289,9 @@ export function ExtensionChecker({
    * Common container style for alert/banner/modal modes
    */
   const baseContainerStyle: React.CSSProperties = {
-    padding: "1rem",
-    borderRadius: "0.5rem",
-    boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+    padding: "16px",
+    borderRadius: "0.25rem",
+    boxShadow: "2px 2px 4px rgba(0,0,0,0.1)",
     backgroundColor: "#fff", // fallback if not overridden
     color: "#000", // fallback if not overridden
     position: "relative",
@@ -297,10 +308,13 @@ export function ExtensionChecker({
           style={{
             ...baseContainerStyle,
             position: "fixed",
-            right: "2.5rem", // approx. Tailwind "right-10"
-            bottom: "2.5rem",
+            right: "0rem",
+            bottom: "0rem",
+            margin: "0.5rem 1rem",
             zIndex: 999,
-            backgroundColor: "#fef9c3", // close to Tailwind bg-yellow-100
+            border: "1px #eee solid",
+            // backgroundColor: "#fef9c3", // close to Tailwind bg-yellow-100
+            backgroundColor: "#fefefe",
             color: "#854d0e", // close to Tailwind text-yellow-800
             ...customStyles,
           }}
@@ -378,10 +392,13 @@ export function ExtensionChecker({
           style={{
             ...baseContainerStyle,
             position: "fixed",
-            right: "2.5rem",
-            bottom: "2.5rem",
+            right: "1.5rem", // approx. Tailwind "right-10"
+            bottom: "1rem",
+            border: "1px #eee solid",
+            maxWidth: "600px",
             zIndex: 99999, // higher than banner
-            backgroundColor: "#fee2e2", // close to Tailwind bg-red-100
+            // backgroundColor: "#fee2e2", // close to Tailwind bg-red-100
+            backgroundColor: "#fefefe", // close to Tailwind bg-red-100
             color: "#b91c1c", // close to Tailwind text-red-800
             ...customStyles,
           }}
